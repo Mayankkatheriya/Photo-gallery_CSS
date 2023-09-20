@@ -73,7 +73,27 @@
     margin-bottom: 1rem;
     color: rgb(38, 14, 175);
     font: 700 3rem/3.5rem var(--montserrat);
+    animation-name: bounceIn;
+    animation-timing-function: ease-in-out;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
   }
+
+  @keyframes bounceIn {
+    0% { 
+       transform: scale(.8);
+    }
+    50% { 
+       transform: scale(2);
+    }
+    70% {
+       transform: scale(1.02);
+    }
+    100% {
+       transform: scale(1.05);
+    }
+ }
+
   .projects .row-2 {
     /* border: 2px solid blue; */
     display: flex;
@@ -202,7 +222,7 @@
     transition: 0.5s;
   }
 
-  #check5:checked ~ .container .row-2 .photo-gallery .MCu {
+  #check5:checked ~ .container .row-2 .photo-gallery .MCU {
     display: flex;
     position: relative;
     transform: scale(1);
@@ -216,12 +236,15 @@
     position: absolute;
     transition: 0.5s;
   }
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 425px) {
     html {
       overflow-x: hidden;
     }
     body{
       overflow-x: hidden;
+    }
+    .projects h2 {
+      font-size: 2rem;
     }
     .projects .photo-gallery {
       grid-template-columns: repeat(2, 1fr);
@@ -233,13 +256,22 @@
     .projects .photo-gallery .pic span {
       font: 700 0.8rem/1.625rem var(--montserrat);
     }
+    .projects .top-content label {
+      font-size: 0.6rem;
+    }
   }
-  @media screen and (min-width: 321px) and (max-width: 768px) {
+  @media screen and (min-width: 426px) and (max-width: 768px) {
     html {
       overflow-x: hidden;
     }
     body{
       overflow-x: hidden;
+    }
+    .projects h2 {
+      font-size: 2.5rem;
+    }
+    .projects .top-content label {
+      font-size: 0.65rem;
     }
     .projects .photo-gallery {
       grid-template-columns: repeat(3, 1fr);
