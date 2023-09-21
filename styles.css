@@ -161,13 +161,13 @@ button {
 }
 .projects .photo-gallery {
   /* border: 2px solid red; */
-  height: 700px;
+  height: 800px;
   margin-top: 1.25rem;
   border-radius: 0.375rem;
   display: grid;
   gap: 24px;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
 }
 .projects .photo-gallery .pic {
   position: relative;
@@ -219,7 +219,8 @@ button {
 }
 #check2:checked ~ .container .row-2 .photo-gallery .paint,
 #check2:checked ~ .container .row-2 .photo-gallery .tech,
-#check2:checked ~ .container .row-2 .photo-gallery .MCU {
+#check2:checked ~ .container .row-2 .photo-gallery .MCU,
+#check2:checked ~ .container .row-2 .photo-gallery .anime {
   display: none;
   transform: scale(0);
   position: absolute;
@@ -233,7 +234,8 @@ button {
 }
 #check3:checked ~ .container .row-2 .photo-gallery .flower,
 #check3:checked ~ .container .row-2 .photo-gallery .paint,
-#check3:checked ~ .container .row-2 .photo-gallery .MCU {
+#check3:checked ~ .container .row-2 .photo-gallery .MCU,
+#check3:checked ~ .container .row-2 .photo-gallery .anime {
   display: none;
   transform: scale(0);
   position: absolute;
@@ -248,7 +250,8 @@ button {
 }
 #check4:checked ~ .container .row-2 .photo-gallery .flower,
 #check4:checked ~ .container .row-2 .photo-gallery .tech,
-#check4:checked ~ .container .row-2 .photo-gallery .MCU {
+#check4:checked ~ .container .row-2 .photo-gallery .MCU,
+#check4:checked ~ .container .row-2 .photo-gallery .anime {
   display: none;
   transform: scale(0);
   position: absolute;
@@ -263,12 +266,30 @@ button {
 }
 #check5:checked ~ .container .row-2 .photo-gallery .flower,
 #check5:checked ~ .container .row-2 .photo-gallery .tech,
-#check5:checked ~ .container .row-2 .photo-gallery .paint {
+#check5:checked ~ .container .row-2 .photo-gallery .paint,
+#check5:checked ~ .container .row-2 .photo-gallery .anime {
   display: none;
   transform: scale(0);
   position: absolute;
   transition: 0.5s;
 }
+
+#check6:checked ~ .container .row-2 .photo-gallery .anime {
+  display: flex;
+  position: relative;
+  transform: scale(1);
+  transition: 0.5s;
+}
+#check6:checked ~ .container .row-2 .photo-gallery .flower,
+#check6:checked ~ .container .row-2 .photo-gallery .tech,
+#check6:checked ~ .container .row-2 .photo-gallery .paint,
+#check6:checked ~ .container .row-2 .photo-gallery .MCU {
+  display: none;
+  transform: scale(0);
+  position: absolute;
+  transition: 0.5s;
+}
+
 @media screen and (max-width: 425px) {
   html {
     overflow-x: hidden;
@@ -292,10 +313,10 @@ button {
   }
   .projects .photo-gallery {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-rows: repeat(10, 1fr);
   }
   .projects .photo-gallery {
-    height: 1000px;
+    height: 1050px;
   }
   .projects .photo-gallery .pic span {
     font: 700 0.8rem/1.625rem var(--montserrat);
@@ -319,7 +340,7 @@ button {
   }
   .projects .photo-gallery {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(7, 1fr);
   }
   .projects .photo-gallery {
     height: 850px;
